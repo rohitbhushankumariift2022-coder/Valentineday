@@ -542,6 +542,51 @@ body {
     50% { transform: translateY(-8px) scale(1.2); }
 }
 
+/* Call Button Styles */
+.btn-call {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #4caf50 0%, #66bb6a 50%, #43a047 100%);
+    color: white;
+    text-decoration: none;
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 25px;
+    box-shadow: 0 10px 30px rgba(76, 175, 80, 0.4);
+    transition: all 0.3s ease;
+    animation: callPulse 2s ease-in-out infinite;
+}
+
+.btn-call:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 40px rgba(76, 175, 80, 0.6);
+}
+
+.phone-icon {
+    font-size: 1.5rem;
+    animation: phoneRing 1s ease-in-out infinite;
+}
+
+@keyframes callPulse {
+    0%, 100% { 
+        box-shadow: 0 10px 30px rgba(76, 175, 80, 0.4);
+    }
+    50% { 
+        box-shadow: 0 10px 40px rgba(76, 175, 80, 0.7), 0 0 20px rgba(76, 175, 80, 0.5);
+    }
+}
+
+@keyframes phoneRing {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-15deg); }
+    50% { transform: rotate(15deg); }
+    75% { transform: rotate(-10deg); }
+}
+
 /* Confetti */
 .confetti-container {
     position: fixed;
