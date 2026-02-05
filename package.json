@@ -1,0 +1,11 @@
+{
+  "name": "valentines-day-arju",
+  "version": "1.0.0",
+  "description": "Valentine's Day App for Arju 💕",
+  "scripts": {
+    "start": "npx serve -s . -l $PORT"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
