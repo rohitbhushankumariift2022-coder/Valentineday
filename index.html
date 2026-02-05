@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💕 For My Special Someone 💕</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Floating Hearts Background -->
+    <div class="hearts-container" id="heartsContainer"></div>
+    
+    <!-- Layer 1: Landing Page -->
+    <section class="layer active" id="layer1">
+        <div class="content">
+            <div class="sparkle-container">
+                <span class="sparkle">✨</span>
+                <span class="sparkle">💫</span>
+                <span class="sparkle">✨</span>
+            </div>
+            <h1 class="greeting">Hi Arju! 💝</h1>
+            <p class="subtitle">Hope you are having a great day....</p>
+            <p class="message">I have something special for you!</p>
+            <button class="btn-love" onclick="nextLayer()">
+                <span>Click Here 💌</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Layer 2: Quiz Intro -->
+    <section class="layer" id="layer2">
+        <div class="content">
+            <h2 class="quiz-title">Let's Play a Little Game! 🎮💕</h2>
+            <p class="quiz-subtitle">Answer these questions about us...</p>
+            <div class="love-meter">
+                <span class="heart-icon">💗</span>
+                <span class="heart-icon">💗</span>
+                <span class="heart-icon">💗</span>
+            </div>
+            <button class="btn-love" onclick="nextLayer()">
+                <span>Start Quiz 💘</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Layer 3: Quiz Question 1 -->
+    <section class="layer" id="layer3">
+        <div class="content quiz-content">
+            <div class="question-number">Question 1 of 3</div>
+            <h2 class="question">What's my favorite thing about you? 🥰</h2>
+            <div class="options">
+                <button class="option-btn" onclick="selectAnswer(this, true)">Your beautiful smile 😊</button>
+                <button class="option-btn" onclick="selectAnswer(this, true)">Everything about you! 💖</button>
+                <button class="option-btn" onclick="selectAnswer(this, true)">The way you make me feel 🦋</button>
+                <button class="option-btn" onclick="selectAnswer(this, true)">All of the above! 💕</button>
+            </div>
+            <p class="hint">Hint: There's no wrong answer here! 💝</p>
+        </div>
+    </section>
+
+    <!-- Layer 4: Quiz Question 2 -->
+    <section class="layer" id="layer4">
+        <div class="content quiz-content">
+            <div class="question-number">Question 2 of 3</div>
+            <h2 class="question">How much do I love you? 💓</h2>
+            <div class="options">
+                <button class="option-btn" onclick="selectAnswer(this, false)">A little bit</button>
+                <button class="option-btn" onclick="selectAnswer(this, false)">Kind of a lot</button>
+                <button class="option-btn" onclick="selectAnswer(this, true)">To infinity and beyond! 🚀💕</button>
+                <button class="option-btn" onclick="selectAnswer(this, false)">More than Gowri's Lal peda 🍬</button>
+            </div>
+            <p class="hint">Think carefully... 🤔💭</p>
+        </div>
+    </section>
+
+    <!-- Layer 5: Quiz Question 3 -->
+    <section class="layer" id="layer5">
+        <div class="content quiz-content">
+            <div class="question-number">Question 3 of 3</div>
+            <h2 class="question">What would I do for you? 💪❤️</h2>
+            <div class="options">
+                <button class="option-btn" onclick="selectAnswer(this, true)">Give you the last slice of cheesecake 🍰</button>
+                <button class="option-btn" onclick="selectAnswer(this, true)">Watch your favorite series on repeat 🎬</button>
+                <button class="option-btn" onclick="selectAnswer(this, true)">Be your personal teddy bear 🧸</button>
+                <button class="option-btn" onclick="selectAnswer(this, true)">Anything and everything! 💫</button>
+            </div>
+            <p class="hint">All correct answers, obviously! 😉</p>
+        </div>
+    </section>
+
+    <!-- Layer 6: The Big Question -->
+    <section class="layer" id="layer6">
+        <div class="content final-content">
+            <div class="envelope" id="envelope">
+                <div class="envelope-flap"></div>
+                <div class="letter">
+                    <h1 class="big-question">Will You Be My Valentine?</h1>
+                    <div class="heart-animation">
+                        <span class="big-heart">💖</span>
+                    </div>
+                    <div class="final-buttons">
+                        <button class="btn-yes" onclick="sayYes()">Yes! 💕</button>
+                        <button class="btn-no" id="noBtn">No 😢</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Layer 7: Celebration -->
+    <section class="layer" id="layer7">
+        <div class="content celebration-content">
+            <div class="confetti-container" id="confetti"></div>
+            <h1 class="celebration-text">Yaaay! 🎉💕</h1>
+            <p class="love-message">I knew you'd say yes!</p>
+            
+            <!-- Our Photo -->
+            <div class="couple-photo-container">
+                <div class="photo-frame">
+                    <div class="photo-hearts">
+                        <span>💕</span><span>💖</span><span>💕</span>
+                    </div>
+                    <img src="our-photo.jpeg" alt="Us Together" class="couple-photo" id="couplePhoto">
+                    <div class="photo-glow"></div>
+                </div>
+            </div>
+            
+            <div class="couple-hearts">
+                <span>👩‍❤️‍👨</span>
+            </div>
+            <p class="forever-text">You + Me = Forever 💝</p>
+            <div class="final-hearts">
+                <span class="floating-heart">💕</span>
+                <span class="floating-heart">💖</span>
+                <span class="floating-heart">💗</span>
+                <span class="floating-heart">💓</span>
+                <span class="floating-heart">💞</span>
+            </div>
+            <p class="signature">With all my love,<br>Your Valentine 💌</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
